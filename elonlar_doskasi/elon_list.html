@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="uz">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="widht=device-widht , initial-scale=1.0">
+        <title> E'lonlar Doskasi </title>
+    </head>
+    <body>
+        <h1> Barcha E'lonlar </h1>
+        <ul>
+            {% for elon in elonlar % }
+            <li>
+                <h2>{{elon.title }}</h2>
+                <p>{{elon.description}}</p>
+                {% if elon.price%}
+                <p>Price: {{elon.price}} UZS</p>
+                {% endif %}
+                <p>Published on: {{elon.created_at }}</p>
+                </li>
+                {% endfor }
+                </ul>
+
+    </body> 
+    </html>
+    
